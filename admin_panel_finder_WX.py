@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
-
 from urllib2 import Request, urlopen, URLError, HTTPError
 
 def Space(j):
@@ -27,14 +26,14 @@ def findAdmin():
 		except URLError as e:
 			continue
 		else:
-			print "OK => ",req_link
+			print "OK ==)> ",req_link
 	system('clear')
 def Credit():
-	Space(9); print "+++++++++++++++++++++++++++++++++++++"
-	Space(9); print "=  *** Admin Panel WX v.10***       ="
-	Space(9); print "=      Script by Sad WX Virus        ="
-	Space(9); print "=      termux_script                  ="
-	Space(9); print "+++++++++++++++++++++++++++++++++++++"
+	Space(9); print "++++++++++++++++++++++++++++++++++=++++++++++++++"
+	Space(9); print "=  *** Admin Panel WX v.10***                    ="
+	Space(9); print "=      Script by Sad WX Virus                    ="
+	Space(9); print "=      termux_script                             ="
+	Space(9); print "+++++++++++++++++++++++++++++++++++++++++++++++++"
 
 Credit()
 findAdmin()
