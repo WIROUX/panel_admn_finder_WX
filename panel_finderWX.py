@@ -3,6 +3,7 @@
 
 from urllib2 import Request, urlopen, URLError, HTTPError
 
+import clear
 def Space(j):
 	i = 0
 	while i<=j:
@@ -30,10 +31,10 @@ def findAdmin():
 			print "OK ==)>>   ",req_link
 	system('clear')
 def Credit():
-	Space(9); print "++++++++++++++++++++++++++++++++++++++++++++"
-	Space(9); print "=       *** Admin Panel WX v.10***         ="
-	Space(9); print "=       ***Script by Sad WX Virus***       ="
-	Space(9); print "=   ***@termux_script***                   ="
-        Space(9); print "++++++++++++++++++++++++++++++++++++++++++++"
+	Space(9); print "++++++++++++++++++++++++++++++++++++++"
+	Space(9); print "=       *** Admin Panel WX v.10***    ="
+	Space(9); print "=       ***Script by Sad WX Virus***  ="
+	Space(9); print "=   ***@termux_script***              ="
+        Space(9); print "++++++++++++++++++++++++++++++++++++++"
 Credit()
 findAdmin()
