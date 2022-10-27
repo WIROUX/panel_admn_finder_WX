@@ -34,7 +34,7 @@ def Credit():
 	Space(9); print "++++++++++++++++++++++++++++++++++++++"
 	Space(9); print "=       *** Admin Panel WX v1.1***    ="
 	Space(9); print "=       ***Script by Sad WX Virus***  ="
-	Space(9); print "=   ***@termux_script***              ="
+	Space(9); print "=   ***@SaDWX_TM     ***              ="
         Space(9); print "++++++++++++++++++++++++++++++++++++++"
 Credit()
 findAdmin()
