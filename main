@@ -1,0 +1,94 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+#imports==================
+from colorama import Fore
+import requests,os,time,urllib.request
+#========================
+plus = (Fore.GREEN+"["+Fore.GREEN+"+"+Fore.GREEN+"] ")
+input_color = (Fore.MAGENTA+" ")
+nigga = (Fore.RED+"["+Fore.YELLOW+"-"+Fore.RED+"] ")
+def main():
+     #connect?hmmm============
+     def connect(host='https://google.com'):
+          try:
+               urllib.request.urlopen(host)
+               pass
+          except urllib.error.URLError as e:
+               print(nigga+Fore.RED+"Your internet is fucking bad")
+               exit()
+               
+          
+     connect()
+     #connect?hmmm============
+
+     #clear===================
+     def clear():
+          os.system("clear")
+     #clear===================
+     clear()
+     #Find Admin page whit custom wordlist =========================
+     def findAdmin_Custom():
+          clear()
+          f = open("~/wordlist.txt","r")
+          link = input(plus+Fore.GREEN+"Enter Site Name (ex : target.com )--> "+input_color).replace("http://","").replace("https://","").replace("/","")
+          dir_pageo = f.read()
+          dir_page = dir_pageo.split("\n")
+          for i in dir_page:
+               http = requests.get(f"https://{link}/"+i).status_code
+               if http == 200:
+                    print(plus+Fore.GREEN+f"I found it --> page : ",i+str(http))
+               elif http == 404:
+                    print(nigga+Fore.RED+f"I can't found it --> page : ",i+str(http))
+               elif http == 403:
+                    print(nigga+Fore.RED+f"I can't found it --> page : ",i+str(http))
+               elif http == 302:
+                    print(nigga+Fore.RED+f"I can't found it --> page : ",i+str(http))
+               elif http == 410:
+                    print(nigga+Fore.RED+f"I can't found it --> page : ",i+str(http))
+               else:
+                    print(nigga+Fore.RED+f"I can't found it --> page : ",i+str(http))
+     #Find Admin page defult wordlist =========================
+     def findAdmin():
+          clear()
+          f = open("link.txt","r")
+          link = input("Enter Site Name \n(ex : target.com ): ").replace("http://","").replace("https://","").replace("/","")
+          dir_pageo = f.read()
+          dir_page = dir_pageo.split("\n")
+          for i in dir_page:
+               http = requests.get(f"https://{link}/"+i).status_code
+               if http == 200:
+                    print(f"I found it --> page : ",i+str(http))
+               elif http == 404:
+                    print(f"I can't found it --> page : ",i+str(http))
+               elif http == 403:
+                    print(f"I can't found it --> page : ",i+str(http))
+               elif http == 302:
+                    print(f"I can't found it --> page : ",i+str(http))
+               elif http == 410:
+                    print(f"I can't found it --> page : ",i+str(http))
+               else:
+                    print(f"I can't found it --> page : ",i+str(http))
+     #input wordlist???=======
+     def wordlist():
+          clear()
+          wordlist = input(plus+Fore.GREEN+"Enter your wordlist(wordlist.txt) if u don't have press Enter"+input_color)
+          if wordlist=="wordlist.txt":
+               findAdmin_Custom()
+          else:
+               print(Fore.RED+"Ok we need defult wordlist")
+               time.sleep(2)
+               findAdmin()
+
+     #input wordlist???=======
+     wordlist()
+if __name__ == '__main__':
+     main()
+     class x:
+         def __init__(self):
+             print(Fore.GREEN+"I'm Starting "+Fore.BLUE+"."+Fore.RED+"."+Fore.LIGHTMAGENTA_EX+".")
+             time.sleep(5)
+         def __del__(self):
+             os.system("clear")
+             print(Fore.RED+"I'm STOPED!")
+             time.sleep(2)
+     a = x()
